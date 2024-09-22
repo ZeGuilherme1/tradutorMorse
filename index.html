@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradutor de Texto para Morse</title>
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+    <style>
+        @keyframes typing{
+            from{
+                width: 0;
+
+            }
+        }
+        @keyframes blinking{
+            50%{
+                border-color: transparent;
+            }
+        }
+        h1{
+            color: white;
+            border-right: 4px solid;
+            width: 28ch;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3s steps(28), blinking 0.5s infinite step-end alternate;
+        }
+        body{
+            font-family: 'JetBrains Mono';font-size: 22px;
+            background-color: black;
+        }
+        input[type="text"] {
+            width: 500px;
+            height: 300px;
+            border-radius: 3px;
+            padding: 10px;
+            font-size: 18px; 
+        }
+        input[type="button"] {
+            width: auto; 
+            height: auto;
+            display: block;
+            margin: 20px auto 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Tradutor de Texto para Morse</h1>
+        <div class="input">
+            <form>
+                <input type="text" id="input" name="texto" placeholder="Insira o texto aqui">
+                <input type="text" id="output" name="traducao" placeholder="Texto traduzido para Morse" readonly>
+                <input type="button" onclick="traduzir()" value="Traduzir">
+            </form>
+        </div>
+    </center>
+    <script src="traduzir.js"></script> 
+</body>
+</html>
